@@ -2644,14 +2644,14 @@ const includeRule: gitlab.IncludeRule = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#projen.gitlab.IncludeRule.property.allowFailure">allowFailure</a></code> | <code>boolean \| <a href="#projen.gitlab.AllowFailure">AllowFailure</a></code> | *No description.* |
-| <code><a href="#projen.gitlab.IncludeRule.property.changes">changes</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#projen.gitlab.IncludeRule.property.exists">exists</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#projen.gitlab.IncludeRule.property.if">if</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#projen.gitlab.IncludeRule.property.needs">needs</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#projen.gitlab.IncludeRule.property.startIn">startIn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#projen.gitlab.IncludeRule.property.variables">variables</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#projen.gitlab.IncludeRule.property.when">when</a></code> | <code><a href="#projen.gitlab.JobWhen">JobWhen</a></code> | *No description.* |
+| <code><a href="#projen.gitlab.IncludeRule.property.allowFailure">allowFailure</a></code> | <code>boolean \| <a href="#projen.gitlab.AllowFailure">AllowFailure</a></code> | Use to allow a job to fail without stopping the pipeline. |
+| <code><a href="#projen.gitlab.IncludeRule.property.changes">changes</a></code> | <code>string[]</code> | To specify when to add a job to a pipeline by checking for changes to specific files. |
+| <code><a href="#projen.gitlab.IncludeRule.property.exists">exists</a></code> | <code>string[]</code> | Use exists to run a job when certain files exist in the repository. |
+| <code><a href="#projen.gitlab.IncludeRule.property.if">if</a></code> | <code>string</code> | Clauses to specify when to add a job to a pipeline: |
+| <code><a href="#projen.gitlab.IncludeRule.property.needs">needs</a></code> | <code>string[]</code> | Use to update a job’s needs for specific conditions. When a condition matches a rule, the job’s needs configuration is completely replaced with the needs in the rule. |
+| <code><a href="#projen.gitlab.IncludeRule.property.startIn">startIn</a></code> | <code>string</code> | You can set the period to trigger the job. The value is an elapsed time in seconds, unless a unit is provided. |
+| <code><a href="#projen.gitlab.IncludeRule.property.variables">variables</a></code> | <code>{[ key: string ]: string}</code> | Use to define variables for specific conditions. |
+| <code><a href="#projen.gitlab.IncludeRule.property.when">when</a></code> | <code><a href="#projen.gitlab.JobWhen">JobWhen</a></code> | Use alone or as part of another rule to control conditions for adding a job to a pipeline. `rules:when` is similar to when, but with slightly different input options. |
 
 ---
 
